@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Game Template</title>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="../static/gameTemplate/index.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sockjs-client@1/dist/sockjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script>
+  </head>
+  <body>
+    <section class="pre_processor" id="pre_processor">
+      <div class="loader"></div>
+    </section>
+    <section class="main-section" id="main-section">
+      <section class="leader-board-grid">
+        <section class="leader-board-card">
+          <div
+            class="leader-board-card-header"
+            style="
+              border: 1px solid rgb(15, 6, 1);
+              box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+                0 15px 40px rgba(166, 173, 201, 0.2);
+            "
+          >
+            <img
+              src="https://img.icons8.com/arcade/64/000000/experimental-trophy-arcade.png"
+              alt=""
+              class="leader-board-card-header-icon"
+              width="35px"
+              style="float: left"
+            />
+            <h2 style="font-weight: 200; margin-left: 10px">LeaderBoard</h2>
+          </div>
+          <div class="leader-board-card-body" id="leader-board-card-body"></div>
+        </section>
+      </section>
+      <section class="main-grid">
+        <!-- playboard section -->
+        <div class="play-board">
+          <div class="play-area">
+            <section>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </section>
+            <section>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </section>
+            <section>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </section>
+            <section>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </section>
+            <section>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+              <span></span>
+            </section>
+          </div>
+          <div class="play-control-area" id="play-control-area">
+            <button class="play-control-area-button">play</button>
+          </div>
+        </div>
+        
+        </section>
+      <section class="chat-grid" >
+        <div class="chat-grid-main" style="border: 1px solid black; margin-right: 20px;">
+          <div
+            class="chat-grid-main-header"
+            style="
+              border: 1px solid rgb(15, 6, 1);
+              box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+                0 15px 40px rgba(166, 173, 201, 0.2);
+            "
+          >
+            <img
+              src="https://img.icons8.com/fluency/48/000000/chat-message.png"
+              alt=""
+              class="chat-grid-main-header-icon"
+              width="35px"
+              style="float: left"
+            />
+            <h2 style="font-weight: 200; margin-left: 10px">Chat</h2>
+          </div>
+       
+        <section class="chat-grid-body">
+          <div
+          class="chat-grid-body-messageCard"
+          style="
+            display: flex;
+            align-items: center;
+            border: 1px solid rgb(15, 6, 1);
+            margin-top: 10px;
+            box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+              0 15px 40px rgba(166, 173, 201, 0.2);
+          "
+        >
+        <div class="chat-grid-body-messageCard-display" style="padding-left: 5px;">  
+        <div class="chat-grid-body-messageCard-display-inner" id="chat-grid-body-messageCard-display-inner">
+          <div>hello there !</div>
+        </div>
+        </div>
+          </div>
+        </section>
+        <section class="chat-grid-footer">
+          <div class="chat-grid-footer-grid">
+            <div class="chat-grid-message">
+              <input type="text"   maxlength="30" id="message"/>
+            </div>
+            <div class="chat-grid-send">
+              <button class="chat-grid-send-button" id="chat-grid-send-button">send</button>
+            </div>
+          </div>
+        </div>
+        </section>
+      </section>
+      </section>
+    </section>
+    <section style="display: none">
+      <div
+        class="leader-board-card-body-playerCard"
+        id="leader-board-card-body-playerCard"
+        style="
+          display: flex;
+          align-items: center;
+          border: 1px solid rgb(15, 6, 1);
+          margin-top: 10px;
+          box-shadow: 0 5px 10px rgba(154, 160, 185, 0.05),
+            0 15px 40px rgba(166, 173, 201, 0.2);
+        "
+      >
+        <img
+          src="../static/images/cute-blue.jpg"
+          alt="testing"
+          width="30px"
+          height="30px"
+          class="player-image"
+        />
+        <div>
+          <h3 style="font-size: auto" class="player-name">blesson thomas</h3>
+          <div
+            style="
+              display: flex;
+              flex-direction: row;
+              justify-content: flex-start;
+              margin-left: 5px;
+              font-size: 30px;
+              color: Red;
+            "
+          >
+            <h6 class="BINGO"></h6>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script src="../static/gameTemplate/index.js"></script>
+  </body>
+</html>

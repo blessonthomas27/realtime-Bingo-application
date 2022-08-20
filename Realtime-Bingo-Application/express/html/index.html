@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./static/Home/index.css">
+</head>
+<body>
+    <section>
+     <img src="./static/Home/image.jpg" alt="image" height="900" >
+    </section>
+    <section class="main">
+        <div class="title">
+            <h1>Welcome to FUN-GAME !</h1><br><h5>Bingo is a game of probability in which players mark off numbers on cards as the numbers are drawn randomly <br> by a caller, the winner being the first person to mark off <br>all their numbers.</h5> 
+            <button class="play-button" id="myBtn">Play now !</button>
+        </div>
+    </section>
+    <section class="footer-filler">
+       footer
+    </section>
+<section>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+        <div class="modal-header">
+        <span class="close">&times;</span>
+        <h2>Welcome </h2>
+        </div>
+        <div class="modal-body">
+            <section class="roomEnter">
+                <section class="roomEnter header">
+                   <section class="roomEnter header room"><div class="roomEnter header room in">Join Room</div></section>
+                    <section class="roomEnter header slider-icon"><label class="switch">
+                        <input type="checkbox" checked id="check_Box">
+                        <span class="slider round"></span>
+                      </label></section>
+                    <section class="roomEnter header room"><div class="roomEnter header room in">Create Room</div></section>
+                </section>
+            </section>
+            <section class="Card">
+                <section class="join-card" id="join-card">
+                    <div style="width:100%;">
+                        <form class="join-form" >
+                        <label for="fname">Name: 
+                        <input type="text" id="-fname" name="fname" maxlength="10" ><br><br></label>
+                        <label for="lrommId">Room Id:    
+                        <input type="text" id="-lrommId" name="lrommId"><br><br></label>
+                        <button type="submit" class="submit-but" value="create" id="join_button_submit">join </button>  
+                    </form></div>
+                </section>
+                <section class="create-card" id="create-card">
+                    <div>      
+                        <label for="fname">Name: </label>
+                        <input type="text" id="fname" name="fname" maxlength="10" ><br><br>
+                        <button type="submit" class="submit-but" value="create" id="create_button_submit">create </button>
+                      </form></div>
+                </section>
+                <section class="avathar">
+                    
+<div class="grid-container">
+    <div class="grid-item"><img class="avatar-image default"  style="width: 80px;" id="baby-blue" src="./static/images/baby-blue.jpg" alt="avatar image"></div>
+    <div class="grid-item"><img class="avatar-image" style="width: 80px;" id="red" src="./static/images/red.jpg" alt="avatar image"></div>
+    <div class="grid-item"><img class="avatar-image" style="width: 80px;" id="green" src="./static/images/green.jpg" alt="avatar image"></div>  
+    <div class="grid-item"><img class="avatar-image" style="width: 80px;" id="goast-blue" src="./static/images/goast-blue.jpg" alt="avatar image"></div>
+    <div class="grid-item"><img class="avatar-image" style="width: 80px;" id="orange" src="./static/images/orange.jpg" alt="avatar image"></div>
+    <div class="grid-item"><img class="avatar-image" style="width: 80px;" id="cute-blue" src="./static/images/cute-blue.jpg" alt="avatar image"></div>  
+    </div>
+  
+                </section>
+            </section>
+            </div>
+      <div class="modal-footer">
+        <h3></h3>
+      </div>
+    </div>
+</div> 
+    </section>
+  </div>
+  <script type="text/javascript" src="./static/Home/index.js"></script>
+</body>
+</html>
